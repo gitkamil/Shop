@@ -1,0 +1,29 @@
+CREATE TABLE
+    product
+    (
+        id BIGINT NOT NULL,
+        contact BOOLEAN NOT NULL,
+        email VARCHAR,
+        model VARCHAR,
+        name VARCHAR,
+        phone VARCHAR,
+        purchase_date DATETIME,
+        purchase_price NUMERIC,
+        serial_number VARCHAR,
+        PRIMARY KEY (id)
+    );
+
+CREATE TABLE
+    hibernate_sequence
+    (
+        next_val BIGINT
+    );
+
+INSERT INTO product (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (1, 1, 'piotr@wp.com', 'laptop lenovo ideapad 320', 'Piotr Nowak', '328-442-545', 4419619200000, '1100');
+INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (2, 0, 'mariusz@aaa.com', 'Kingston pendrive ', 'Mariusz Marecki', '448-396-545', 4419619200000, '1999');
+INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (3, 1, 'dawid@bbb.com', 'Xiaomi redmi note 5', 'Dawid Dawid', '562-821-552', 4419619200000, '2100');
+
+INSERT INTO hibernate_sequence (next_val) VALUES (4);
